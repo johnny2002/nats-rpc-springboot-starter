@@ -11,15 +11,12 @@ import java.util.List;
         serviceEndpoint = "demo"
 )
 public interface DemoApiClient extends DemoApi{
-    String defaultMessageHandler(DemoMessage message);
 
     // Call with message and headers
-    String defaultMessageHandler(DemoMessage message, Headers headers);
+    String defaultMessageHandler1(DemoMessage message, Headers headers);
 
     // Call specific action method
     List<String> getRoles(DemoMessage message);
 
-    // Call with custom prefix
-    List<String> getRoles(String prefix, DemoMessage message, Headers headers);
 
 }

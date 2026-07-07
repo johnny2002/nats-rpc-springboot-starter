@@ -18,7 +18,7 @@ import java.util.List;
         endpointName = "demo",
         messageClass = DemoMessage.class)
 @Component
-public class DemoServiceHandler extends AbstractServiceHandler<DemoMessage> {
+public class DemoServiceHandler extends AbstractServiceHandler<DemoMessage> implements DemoApi {
 
     private final Connection connection;
     private final ObjectMapper objectMapper;

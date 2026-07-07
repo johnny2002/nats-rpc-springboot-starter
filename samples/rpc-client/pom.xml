@@ -30,6 +30,23 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>com.github.rongfengliang</groupId>
+            <artifactId>nats-rpc-core</artifactId>
+            <version>1.0.6+3.5-SNAPSHOT</version>
+            <exclusions>
+                <!-- 排除所有 spring-boot 相关传递依赖 -->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
             <version>3.5.16</version>

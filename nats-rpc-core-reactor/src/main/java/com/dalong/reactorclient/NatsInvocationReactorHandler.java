@@ -51,7 +51,7 @@ public class NatsInvocationReactorHandler implements InvocationHandler {
             subject = String.format(
                     serviceEndpointSubjectFormatt,
                     serviceName,
-                    (String) args[0],
+                    args[0],
                     endpoint
             );
             BaseMessage msg = (BaseMessage) args[1];
@@ -65,7 +65,7 @@ public class NatsInvocationReactorHandler implements InvocationHandler {
             subject = String.format(
                     serviceEndpointSubjectFormatt,
                     serviceName,
-                    (String) args[0],
+                    args[0],
                     endpoint
             );
             BaseMessage msg = (BaseMessage) args[1];

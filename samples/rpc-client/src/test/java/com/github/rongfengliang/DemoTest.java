@@ -15,7 +15,7 @@ import java.util.List;
 public class DemoTest {
 
     @Autowired
-    DemoApi demoApi;
+    DemoApiClient demoApi;
 
     @Test
     public void callService() {
@@ -24,11 +24,11 @@ public class DemoTest {
         message.setAge(30);
 
         // Call the default handler
-        demoApi.defaultMessageHandler(message, new Headers().add("type", "demo"));
+        demoApi.defaultMessageHandler1(message, new Headers().add("type", "demo"));
         //System.out.println(greeting);  // Output: Hello, Alice
         System.out.println("defaultMessageHandler called, no awaiting.");
         // Call the getRoles action
         List<String> roles = demoApi.getRoles(message);
-        System.out.println(roles);  // Output: [admin, user, guest]
+        System.out.println("getRoles:" + roles);  // Output: [admin, user, guest]
     }
 }
